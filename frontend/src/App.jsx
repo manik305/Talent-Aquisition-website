@@ -660,13 +660,28 @@ export default function App() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {/* Active JD Banner Header */}
-          <div>
-            <h2 style={{ fontSize: '28px', fontWeight: '800', color: '#fff', letterSpacing: '-0.02em', marginBottom: '0.35rem' }}>
-              {jd ? jd.title : 'No Target Role Selected'}
-            </h2>
-            <p className="font-mono-jetbrains" style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
-              {jd ? `${jd.environmental_context} • Min Exp: ${jd.min_experience_years} Years • Active Assessment Mode` : 'Awaiting target requirements...'}
-            </p>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', borderBottom: '1px solid rgba(255,255,255,0.03)', paddingBottom: '1rem' }}>
+            <div>
+              <h2 style={{ fontSize: '28px', fontWeight: '800', color: '#fff', letterSpacing: '-0.02em', marginBottom: '0.35rem' }}>
+                {jd ? jd.title : 'No Target Role Selected'}
+              </h2>
+              <p className="font-mono-jetbrains" style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                {jd ? `${jd.environmental_context} • Min Exp: ${jd.min_experience_years} Years • Active Assessment Mode` : 'Awaiting target requirements...'}
+              </p>
+            </div>
+            
+            {/* Cognitive Recruiter Philosophy Card */}
+            <div className="glass-card" style={{ maxWidth: '420px', padding: '0.65rem 1rem', background: 'var(--on-primary-glow)', border: '1px solid rgba(207, 188, 255, 0.12)', borderRadius: '10px', display: 'flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 4px 20px rgba(0,0,0,0.2)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(16, 185, 129, 0.1)', color: 'var(--emerald-neon)' }}>
+                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>psychology</span>
+              </div>
+              <div style={{ flex: 1 }}>
+                <p style={{ fontSize: '10.5px', color: '#fff', fontWeight: '600', lineHeight: '1.3' }}>Cognitive Assessment Active</p>
+                <p style={{ fontSize: '9px', color: 'var(--text-muted)', lineHeight: '1.4', marginTop: '0.1rem' }}>
+                  Ranks candidates the way an elite recruiter would—not by fragile keyword filtering, but by deeply understanding who fits the role.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Bento Stats Panel */}
