@@ -1,0 +1,26 @@
+# Environments
+.env
+.env.local
+.env.*
+
+# System Execution Memories
+memory.md
+
+# Python Caches & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+build/
+dist/
+.pytest_cache/
+
+# Node Package & Debug logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+dist-frontend/
